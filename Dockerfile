@@ -10,8 +10,3 @@ RUN mvn package
 RUN boxfuse run target/hello-1.0.war
 
 
-#RUN apt install nginx -y
-#EXPOSE 80
-#RUN rm -rf /var/www/html/*
-#ADD index.html /var/www/html/
-#CMD ["nginx", "-g", "daemon off;"]
