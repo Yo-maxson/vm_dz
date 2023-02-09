@@ -1,12 +1,11 @@
 FROM ubuntu:18.04
 RUN apt update
-RUN apt install default-jdk
-RUN apt install tomcat9
-RUN apt install maven
-RUN apt install git
+RUN apt install default-jdk -y
+RUN apt install tomcat9 -y
+RUN apt install maven -y
+RUN apt install git -y
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 RUN cd boxfuse-sample-java-war-hello
 RUN mvn package
 RUN boxfuse run target/hello-1.0.war
-
 
